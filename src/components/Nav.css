@@ -1,32 +1,115 @@
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+}
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .topnav {
-    margin-top: 20px;
-    border-radius: 25px;
-    font-size: 30px;
-    overflow: hidden;
-    background-color: #333;
-  }
-  
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-    font-size: 20px;
-  }
-  
-  .topnav a.active {
-    background-color: #4CAF50;
-    color:green;
-  }
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+.navbar {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: 200ms ease;
+  overflow: scroll;
+}
+
+.navbar::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.navbar::-webkit-scrollbar-track {
+  display: none;
+}
+.navbar::-webkit-scrollbar-thumb {
+  background: purple;
+  border-radius: 25px;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 7rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+}
+
+.nav-link:hover{
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+}
+.link-text{
+  display: none;
+}
+
+.nav-link svg {
+  min-width: 2rem;
+  margin: 0 1.7rem;
+}
+
+.navbar:hover {
+  width: 16rem;
+}
+
+.navbar:hover .link-text{
+  display: block;
+}
+
+.svg-color {
+  color: pink;
+}
+
+.svg-color {
+  transition: var(--transition-speed);
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1rem;
+  text-align: center;
+  color: var(--text-secondart);
+  background: var(--bg-secondary);
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(-180deg);
+}

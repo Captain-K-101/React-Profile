@@ -1,9 +1,17 @@
 import React,{Fragment} from 'react'
 import {Redirect,useHistory,useLocation} from 'react-router-dom'
+import Button from '@material-ui/core/Button'
 export const Home = () => {
   return(
   <Fragment>
     <h1>Home</h1>
+    <FakeText />
+    <FakeText />
+    <FakeText />
+    <FakeText />
+    <FakeText />
+    <FakeText />
+    <FakeText />
     <FakeText />
   </Fragment>
   )
@@ -11,10 +19,18 @@ export const Home = () => {
   
 // About Page
 export const About = ({match:{params:{name}},history}) => {
+
   return(
   <Fragment>
+    
     <h1>About {name}</h1>
     <button onClick={() => history.push('/') } >Go to home</button>
+    <FakeText />
+    <FakeText />
+    <FakeText />
+    <FakeText />
+    <FakeText />
+    <FakeText />
     <FakeText />
   </Fragment>
   )
@@ -28,7 +44,9 @@ export const Contact = () => {
   <Fragment>
   <h1> Location:{pathname}</h1>
     <h1>Contact</h1>
-    <button onClick={() => history.push('/') } >Go to home</button>
+      <Button variant="contained" color="primary" onClick={() => history.push('/') }>
+      Go to home
+    </Button>
     <FakeText />
   </Fragment>
   )

@@ -5,13 +5,10 @@ import Routing from './components/Routing'
 import Nav from './components/Nav'
 
 function App() {
-  const name = 'John Doe'
-  const isAuthenticated=false
-  
   return (
     <R>
+    <Nav />
     <main>
-      <Nav />
       <Routing />
     </main>
     </R>
