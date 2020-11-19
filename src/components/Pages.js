@@ -1,6 +1,7 @@
 import React,{Fragment} from 'react'
 import {Redirect,useHistory,useLocation} from 'react-router-dom'
 import Button from '@material-ui/core/Button'
+import './Pages.css'
 export const Home = () => {
   return(
   <Fragment>
@@ -24,7 +25,7 @@ export const About = ({match:{params:{name}},history}) => {
   <Fragment>
     
     <h1>About {name}</h1>
-    <button onClick={() => history.push('/') } >Go to home</button>
+    <button className="push" onClick={() => history.push('/') } >Go to home</button>
     <FakeText />
     <FakeText />
     <FakeText />

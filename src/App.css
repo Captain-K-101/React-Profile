@@ -4,6 +4,9 @@
   background-color: white;
   margin: 0px;
   padding: 0px;
+  position: absolute;
+  z-index: 1;
+
 }
 body::-webkit-scrollbar {
   width: 0.5rem;
